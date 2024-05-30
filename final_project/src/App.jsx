@@ -1,35 +1,15 @@
-import { useState } from "react";
-import "./App.css";
-import Form from "./components/Form";
+import Main from './pages/Main'
+import Other from './pages/Other'
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 function App() {
-  const [apiData, setApiData] = useState();
-  const apiKey = "c0f5ebc6";
-
-  async function handleApi(movieName) {
-    try {
-      const response = await fetch(
-        `http://www.omdbapi.com/?apikey=${apiKey}&t=${movieName}`
-      );
-      if (!response.ok) {
-        throw new Error("Something went wrong");
-      }
-      const data = await response.json();
-      setApiData(data);
-      console.log(data);
-    } catch (error) {
-      console.error(error);
-      console.log("there was an error");
-    }
-  }
-
   return (
-    <div className="flex flex-col items-center justify-center w-screen gap-10">
-      <Form onSubmit={handleApi} />
-      <div className="w-10/12 h-screen border border-gray-400 rounded bg-lavender">
-        
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Main />} />
+      </Routes>
+    </Router>
+
   );
 }
 

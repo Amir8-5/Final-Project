@@ -15,6 +15,17 @@
   }
 }
 
+@layer components {
+
+  button {
+    user-select: none;
+  }
+
+  #quiz-form-label {
+    margin-right: 10px;
+  }
+}
+
 
 
 .lato-thin {

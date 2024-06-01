@@ -1,5 +1,4 @@
 import Main from './pages/Main'
-import Other from './pages/Other'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 
 function App() {

@@ -26,6 +26,13 @@
   }
 }
 
+@layer utilities {
+
+  .overlay {
+    @apply w-full max-w-28 h-8 text-center
+  }
+}
+
 
 
 .lato-thin {

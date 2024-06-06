@@ -20,10 +20,6 @@
   button {
     user-select: none;
   }
-
-  #quiz-form-label {
-    margin-right: 10px;
-  }
 }
 
 @layer utilities {

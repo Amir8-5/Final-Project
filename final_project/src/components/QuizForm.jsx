@@ -41,11 +41,11 @@ function QuizForm({
     <div
       className={` flex justify-center items-center gap-2 ${solvedState ? "gap-4" : ""}`}
     >
-      <div className={`overlay ${(attempted&&solved)?"bg-green-500":""} ${(attempted&&!solved?"bg-red-500":"")} ${(!attempted)?"bg-transparent":""}`}>
+      <div className={`overlay flex justify-center items-center ${(attempted&&solved)?"bg-green-500":""} ${(attempted&&!solved?"bg-red-500":"")} ${(!attempted)?"bg-transparent":""}`}>
         <label
           htmlFor="quiz-form"
           id="quiz-form-label"
-          className="w-10 min-w-10 visible"
+          className="w-32 min-w-10 visible text-center"
         >
           {lableTitle}
         </label>
